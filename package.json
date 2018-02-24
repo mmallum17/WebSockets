@@ -1,0 +1,7 @@
+{
+  "name": "WebSockets",
+  "version": "0.0.1",
+  "dependencies": {
+    "ws": "^4.1.0"
+  }
+}

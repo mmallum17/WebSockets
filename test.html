@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+
+    var connection = new WebSocket('ws://localhost:9030');
+
+    connection.onopen = function () {
+        connection.send('hello from client');
+    };
+
+    // Log errors
+    connection.onerror = function (error) {
+        console.error('WebSocket Error ' + error);
+    };
+
+    // Log messages from the server
+    connection.onmessage = function (e) {
+        console.log("message from server", e.data);
+    };
+
+
+</script>
+</body>
+</html>
